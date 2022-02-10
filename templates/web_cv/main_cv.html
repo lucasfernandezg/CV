@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Lucas Fernandez CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{% static "web_cv/stylesheet/styles.css" %}">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+  </head>
+
+
+  <body id="page-top">
+
+  <!-- Side Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+          <span class="d-block d-lg-none">Lucas Fernandez</span>
+          <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="web_cv\images\lucas.jpg" alt="..." /></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre Mi</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Educación Formal</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiencia Laboral</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Este CV</a></li>
+          </ul>
+      </div>
+  </nav>
+
+
+  <div class="container-fluid p-0">
+
+      <!-- SobreMi-->
+      <section class="resume-section" id="about">
+          <div class="resume-section-content">
+              <h1 class="mb-0">
+                  Lucas
+                  <span class="text-primary">Fernandez</span>
+              </h1>
+              <div class="subheading mb-5">
+                  27 Años · Ciudad de Buenos Aires · Estudiante Avanzado de Ingenieria de Sonido · Programador ·
+                  <a href="mailto:name@email.com">lucasrafaelfg@gmail.com</a>
+              </div>
+              <p class="lead mb-5">Mis estudios universitarios estan orientados a la acústica, la electroacustica, la electronica de audio, el procesamiento digital de señales y la grabación y el sonido en vivo.
+              Por mi cuenta, me he formado como programador, principalmente en python, en areas como el desarrollo web - tanto front como back-end -, el análisis de datos y desarrollo de softwares y aplicaciones de escritorio.
+              </p>
+              <div class="social-icons">
+                  <a class="social-icon" href="https://www.linkedin.com/in/lucasfernandezg/"><i class="fab fa-linkedin-in"></i></a>
+                  <a class="social-icon" href="https://github.com/lucasfernandezg"><i class="fab fa-github"></i></a>
+              </div>
+          </div>
+      </section>
+      <hr class="m-0" />
+
+
+      <!-- Education-->
+      <section class="resume-section" id="education">
+          <div class="resume-section-content">
+              <h2 class="mb-5">Educación Formal</h2>
+
+                  {% if estudios %}
+
+                  {% for obj in estudios %}
+                  <div class="d-flex flex-column flex-md-row justify-content-between">
+                  <div class="flex-grow-1">
+                      <h3 class="mb-0">{{ obj.institucion }}</h3>
+                      <div class="subheading mb-3">{{ obj.grado }}</div>
+
+                      <!-- Descripcion Acordeon-->
+                      <div class="accordion" id="accordionExample">
+                        {% if obj.i == 1 %}
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Descripción
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <strong>{{ obj.descripcion }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                          {% endif %}
+                          {% if obj.i == 2 %}
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                Descripción
+                              </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>{{ obj.descripcion }}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                          {% endif %}
+                          {% if obj.i == 3 %}
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                Descripción
+                              </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>{{ obj.descripcion }}
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                          {% endif %}
+
+                  </div>
+                  <div class="flex-shrink-0"><span class="text-primary">{{ obj.inicio }} - {{ obj.fin }}</span></div>
+              </div>
+              <br>
+              <br>
+              {% endfor %}
+              {% else %}
+              <h3 class="mb-0">Error Template Tags</h3>
+              {% endif %}
+
+          </div>
+      </section>
+      <hr class="m-0" />
+
+
+
+
+      <!-- Experiencia Laboral-->
+      <section class="resume-section" id="experience">
+          <div class="resume-section-content">
+              <h2 class="mb-5">Experiencia Laboral</h2>
+
+              {% if trabajos %}
+              {% for obj in trabajos %}
+              <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                  <div class="flex-grow-1">
+                      <h3 class="mb-0">{{ obj.puesto }}</h3>
+                      <div class="subheading mb-3">{{ obj.institucion }}</div>
+
+                      <!-- Descripcion Acordeon-->
+                      <div class="accordion" id="accordionExample">
+                        {% if obj.i == 1 %}
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                              Descripción
+                            </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <strong>{{ obj.descripcion }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                          {% endif %}
+
+                  </div>
+                  <div class="flex-shrink-0"><span class="text-primary">{{ obj.inicio }} - {{ obj.fin }}</span></div>
+              </div>
+
+              {% endfor %}
+              {% else %}
+              <h3 class="mb-0">Error Template Tags</h3>
+              {% endif %}
+
+          </div>
+      </section>
+      <hr class="m-0" />
+
+
+
+
+      <!-- Habilidades-->
+      <section class="resume-section" id="skills">
+          <div class="resume-section-content">
+              <h2 class="mb-5">Habilidades</h2>
+              <div class="subheading mb-3">Programación</div>
+              <ul class="list-inline dev-icons">
+                  <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+
+                  <p style="font-size:12px;">HTML5</p>
+
+                  <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                  <p style="font-size:12px;">CSS</p>
+                  <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                  <p style="font-size:12px;">Python. Data science junto con numerosas librerias (Numpy, Scipy, Matplotlib, Pandas, Selenium y muchas mas. Django Framework ;)</p>
+                  <li class="list-inline-item"><i class="fab fa-windows"></i></li>
+                  <p style="font-size:12px;">Windows OS y el paquete Office</p>
+                  <li class="list-inline-item"><i class="fab fa-linux"></i></li>
+                  <p style="font-size:12px;">Linux</p>
+
+              </ul>
+              <br>
+
+              <div class="subheading mb-3">Idiomas</div>
+              <ul class="list-inline dev-icons">
+                  <li class="list-inline-item">
+                  <p style="font-size:12px;">Ingles fluido</p>
+                  </li>
+              </ul>
+              <br>
+
+
+              <div class="subheading mb-3">Formas de Aprendizaje</div>
+              <ul class="fa-ul mb-0">
+                  <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span>
+                      Autodidacta
+                  </li>
+                  <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span>
+                      Udemy, Coursera, Blogs
+                  </li>
+                  <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span>
+                      Libros de programación
+                  </li>
+
+              </ul>
+          </div>
+      </section>
+      <hr class="m-0" />
+
+
+
+      <!-- Este CV-->
+      <section class="resume-section" id="interests">
+          <div class="resume-section-content">
+              <h2 class="mb-5">Este CV</h2>
+              <p>La idea de este CV es presentar y demostrar mis conocimientos sobre programación.
+                  Para lograr esta página se utiliza HTML, CSS, Python y Django Framework entre otros conocimientos sobre servidores web y demás.
+                  El Diseño del Front-End de esta página web es colaboración de Clarence Taylor, quien presta el código HTML y CSS general para quien lo desee.
+                  La diferencia entre el proyecto de Taylor y el mío es la funcionalidad otrogada con python a través de Django.
+                  Las distintas listas de experiencia laboral, programación y educación formal forman parte de la base de datos, la cual se muestra de manera automatica grácias a python.
+                  Si deseo agregar uno o mil items a estas listas, puedo hacerlo muy rápidamente modificando la base de datos sin modificar en absoluto el codigo del Front-End.
+                  </p>
+              <p class="mb-0">Grácias por leer mi CV web! Lucas.-</p>
+          </div>
+      </section>
+
+
+
+  </body>
+</html>

@@ -8,7 +8,7 @@ class Estudios(models.Model):
     grado = models.CharField(max_length=32)
     inicio = models.DateField(null=True)
     fin = models.DateField(null=True)
-    descripcion = models.CharField(max_length=254, widget=forms.Textarea())
+    descripcion = models.CharField(max_length=254, widget=models.TextField())
     i = models.IntegerField()
 
 
@@ -23,5 +23,5 @@ class Trabajos(models.Model):
     puesto = models.CharField(max_length=32)
     inicio = models.DateField(null=True)
     fin = models.DateField(null=True)
-    descripcion = models.CharField(max_length=254, widget=forms.Textarea())
+    descripcion = models.CharField(max_length=254, widget=models.TextField())
     i = models.IntegerField()

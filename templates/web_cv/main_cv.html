@@ -74,7 +74,7 @@
                       <h3 class="mb-0">{{ obj.institucion }}</h3>
                       <div class="subheading mb-3">{{ obj.grado }}</div>
 
-                      <br>
+
                       <!-- Descripcion Acordeon-->
                       <div class="accordion" id="accordionExample">
                         {% if obj.i == 1 %}
@@ -116,7 +116,7 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              <strong>{{ obj.descripcion }}
+                              <strong>{{ obj.descripcion|linebreaks }}
                               </div>
                             </div>
                           </div>
@@ -152,7 +152,7 @@
                       <h3 class="mb-0">{{ obj.puesto }}</h3>
                       <div class="subheading mb-3">{{ obj.institucion }}</div>
 
-                      <br>
+
                       <!-- Descripcion Acordeon-->
                       <div class="accordion" id="accordionExample">
                         {% if obj.i == 1 %}
@@ -164,7 +164,7 @@
                           </h2>
                           <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                           <div class="accordion-body">
-                            <strong>{{ obj.descripcion }}
+                            <strong>{{ obj.descripcion|linebreaks }}
                             </div>
                           </div>
                         </div>

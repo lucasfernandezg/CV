@@ -23,5 +23,5 @@ class Trabajos(models.Model):
     puesto = models.CharField(max_length=32)
     inicio = models.DateField(null=True)
     fin = models.DateField(null=True)
-    descripcion = models.textField(max_length=254)
+    descripcion = models.TextField(max_length=254)
     i = models.IntegerField()

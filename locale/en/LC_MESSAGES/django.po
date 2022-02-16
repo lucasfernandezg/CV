@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-16 20:51-0300\n"
+"PO-Revision-Date: 2022-02-16 20:52+0000\n"
+"Last-Translator:   <lucasrafaelfg@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\templates\web_cv\main_cv.html:31
+msgid "Sobre Mi"
+msgstr "About Myself"
+
+#: .\templates\web_cv\main_cv.html:32 .\templates\web_cv\main_cv.html:78
+msgid "Educación Formal"
+msgstr "Formal Education"
+
+#: .\templates\web_cv\main_cv.html:33 .\templates\web_cv\main_cv.html:174
+msgid "Experiencia Laboral"
+msgstr "Job Experience"
+
+#: .\templates\web_cv\main_cv.html:34 .\templates\web_cv\main_cv.html:225
+msgid "Habilidades"
+msgstr "Skills"
+
+#: .\templates\web_cv\main_cv.html:35 .\templates\web_cv\main_cv.html:294
+msgid "Este CV"
+msgstr "This Resume"
+
+#: .\templates\web_cv\main_cv.html:38
+#| msgid "Idiomas"
+msgid "Idioma"
+msgstr "Language"
+
+#: .\templates\web_cv\main_cv.html:64
+msgid ""
+"Mis estudios universitarios estan orientados a la acústica, la "
+"electroacústica, la electrónica de audio, el procesamiento digital de "
+"señales y la grabación y el sonido en vivo. Por mi cuenta, me he formado "
+"como programador, principalmente en Python, en areas como el desarrollo web "
+"- tanto front como back-end -, el análisis de datos y desarrollo de "
+"softwares y aplicaciones de escritorio."
+msgstr ""
+
+#: .\templates\web_cv\main_cv.html:95 .\templates\web_cv\main_cv.html:114
+#: .\templates\web_cv\main_cv.html:133 .\templates\web_cv\main_cv.html:190
+msgid "Descripción"
+msgstr ""
+
+#: .\templates\web_cv\main_cv.html:226
+#| msgid "Libros de programación"
+msgid "Programación"
+msgstr "Programing books"
+
+#: .\templates\web_cv\main_cv.html:235
+msgid ""
+"Python. Data science junto con numerosas librerias (Numpy, Scipy, "
+"Matplotlib, Pandas, Selenium y muchas mas. Django Framework"
+msgstr ""
+"Python. Data Science with plenty of packages, as Numpy, Scipy, Matplotlib, "
+"Pandas, Selenium and many more. Django Framework"
+
+#: .\templates\web_cv\main_cv.html:237
+msgid "Windows OS y el paquete Office"
+msgstr "Windows OS and Office"
+
+#: .\templates\web_cv\main_cv.html:244
+msgid "Idiomas"
+msgstr "Languages"
+
+#: .\templates\web_cv\main_cv.html:247
+msgid "Ingles fluido"
+msgstr "Fluid English"
+
+#: .\templates\web_cv\main_cv.html:253
+msgid "Formas de Aprendizaje"
+msgstr "Learning Ways"
+
+#: .\templates\web_cv\main_cv.html:257
+msgid "Autodidacta. Necesidad constante de aprender y seguir creciendo."
+msgstr "Self-Taught Person. Must constantly learn and keep growing"
+
+#: .\templates\web_cv\main_cv.html:261
+msgid "Realicé cursos como"
+msgstr "Courses taken"
+
+#: .\templates\web_cv\main_cv.html:280
+msgid "Libros de programación"
+msgstr "Programing books"
+
+#: .\templates\web_cv\main_cv.html:295
+msgid ""
+"La idea de este CV es presentar y demostrar mis conocimientos sobre "
+"programación."
+msgstr ""
+"The idea behind this Resume is to present myself and show some of my "
+"programing knowledge."
+
+#: .\templates\web_cv\main_cv.html:296
+msgid ""
+"Para lograr esta página se utiliza HTML, CSS, Python y Django Framework "
+"entre otros conocimientos sobre servidores web y demás."
+msgstr ""
+"To create this webpage HTML, CSS, Python and Django Framework were used, "
+"among other server and web background."
+
+#: .\templates\web_cv\main_cv.html:297
+msgid ""
+"El Diseño del Front-End de esta página web es colaboración de Clarence "
+"Taylor, quien presta el código HTML y CSS general para quien lo desee."
+msgstr ""
+"The Front-End design is Clarence Taylor's. He upload his HTML and CSS code "
+"for anyone to use."
+
+#: .\templates\web_cv\main_cv.html:298
+msgid ""
+"La diferencia entre el proyecto de Taylor y el mío es la funcionalidad "
+"otrogada con python a través de Django."
+msgstr ""
+"The difference between Taylors project and mine is the functionality added "
+"by Django."
+
+#: .\templates\web_cv\main_cv.html:299
+msgid ""
+"Las distintas listas de experiencia laboral, programación y educación formal"
+" forman parte de la base de datos, la cual se muestra de manera automatica "
+"gracias a python."
+msgstr ""
+"Every list displayed in jobs experience and formal education are part of the"
+" database, which is automatically shown using python with Django."
+
+#: .\templates\web_cv\main_cv.html:300
+msgid ""
+"Si deseo agregar uno o mil items a estas listas, puedo hacerlo muy "
+"rápidamente modificando la base de datos sin modificar en absoluto el codigo"
+" del Front-End."
+msgstr ""
+"If a thousand items were to be added to the database, these would be shown "
+"instantly without any Front-End code modification."
+
+#: .\templates\web_cv\main_cv.html:301
+msgid "El código entero de esta página esta en el repositorio CV de"
+msgstr "The entire code for this webpage is uploaded in the CV repository in "
+
+#: .\templates\web_cv\main_cv.html:303
+msgid "¡Gracias por leer mi CV web! Lucas.-"
+msgstr "Thank you for reading my resume! Lucas.-"
+
+#~ msgid "Libros"
+#~ msgstr "Books"
+
+#~ msgid "de"
+#~ msgstr "about"

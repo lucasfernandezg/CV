@@ -9,7 +9,11 @@ class Estudios(models.Model):
     inicio = models.DateField(null=True)
     fin = models.DateField(null=True)
     descripcion = models.TextField(max_length=254)
+    descripcion_en = models.TextField(max_length=254, default="Test")
     i = models.IntegerField()
+
+    def __str__(self):
+        return self.institucion
 
 
 class Programacion(models.Model):
@@ -24,4 +28,8 @@ class Trabajos(models.Model):
     inicio = models.DateField(null=True)
     fin = models.DateField(null=True)
     descripcion = models.TextField(max_length=254)
+    descripcion_en = models.TextField(max_length=254, default="Test")
     i = models.IntegerField()
+
+    def __str__(self):
+        return self.institucion

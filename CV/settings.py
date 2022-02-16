@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+from django.utils.translation import gettext_lazy as _l
 from pathlib import Path
 import os
 
@@ -26,9 +27,9 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 SECRET_KEY = 'django-insecure-)caqbq#k&sev(4)3t4y*-o1+pz=x=9$d+c%n+4(=1!6bm%asuk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["lucasfernandez.pythonanywhere.com"]
+ALLOWED_HOSTS = []  # "lucasfernandez.pythonanywhere.com"]
 
 
 # Application definition
@@ -41,11 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web_cv',
+    'rosetta',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -107,12 +110,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
+LANGUAGE_CODE = 'es'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
 
@@ -129,3 +131,14 @@ STATICFILES_DIRS = [  # Creamos una lista
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+## Para que se traduzca
+
+
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale/')]
+
+LANGUAGES = [
+    ('es', _l('Spanish')),
+    ('en', _l('English')),
+]

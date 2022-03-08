@@ -14,11 +14,15 @@ from django.utils.translation import gettext_lazy as _l
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 # Creamos la var con el path a static
-STATIC_DIR = os.path.join(BASE_DIR, "static")
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -29,7 +33,7 @@ SECRET_KEY = 'django-insecure-)caqbq#k&sev(4)3t4y*-o1+pz=x=9$d+c%n+4(=1!6bm%asuk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["lucasfernandez.pythonanywhere.com"]
+ALLOWED_HOSTS = ["lucasfernandez.pythonanywhere.com", "127.0.0.1"]
 
 
 # Application definition
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'web_cv',
     'rosetta',
+    'player',
 ]
 
 MIDDLEWARE = [

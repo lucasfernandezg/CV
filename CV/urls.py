@@ -32,10 +32,6 @@ urlpatterns = i18n_patterns(
     re_path(r"^audio/", include("player.urls")),
 )
 
-# if 'rosetta' in settings.INSTALLED_APPS:
-#     urlpatterns += [
-#         re_path(r'^rosetta/', include('rosetta.urls'))
-#     ]
 #
 # urlpatterns += i18n_patterns(
 #     re_path(r"^", include("web_cv.urls"))

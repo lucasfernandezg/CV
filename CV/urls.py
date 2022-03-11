@@ -29,7 +29,6 @@ from django.contrib.staticfiles.urls import static
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls, name="admin"),
     re_path(r"^", include("web_cv.urls"), name="es"),
-    re_path(r'^rosetta/', include('rosetta.urls'), name="rosetta"),
     re_path(r"^audio/", include("player.urls")),
 )
 
@@ -44,3 +43,8 @@ urlpatterns = i18n_patterns(
 
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += [
+        re_path(r'^rosetta/', include('rosetta.urls'))
+    ]
